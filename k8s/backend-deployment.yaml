@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: <YOUR_DOCKERHUB_USERNAME>/porsche-backend:latest
+        image: saipragath/porsche-backend:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
