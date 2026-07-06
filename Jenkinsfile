@@ -63,7 +63,7 @@ pipeline {
         stage('Deploy to Kubernetes') {
             steps {
                 // Ensure Jenkins server has kubeconfig configured
-                sh "kubectl apply -f k8s/mysql-secret.yaml"
+                sh "kubectl create secret generic mysql-secret --from-literal=mysql-root-password=root --from-literal=mysql-password=porsche --dry-run=client -o yaml | kubectl apply -f -"
                 sh "kubectl apply -f k8s/mysql-deployment.yaml"
                 sh "kubectl apply -f k8s/mysql-service.yaml"
                 sh "kubectl apply -f k8s/backend-deployment.yaml"
