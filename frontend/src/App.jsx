@@ -11,7 +11,7 @@ function App() {
     // For demo purposes, we'll mock the data
     setVehicles([
       { id: 1, modelName: '911 Carrera', category: '911', basePrice: 114400, horsepower: 379, zeroToSixty: 4.0, imageUrl: 'https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?w=800' },
-      { id: 2, modelName: 'Taycan 4S', category: 'Taycan', basePrice: 111100, horsepower: 522, zeroToSixty: 3.8, imageUrl: 'https://images.unsplash.com/photo-1503376760356-5eb6900f13a5?w=800' },
+      { id: 2, modelName: 'Taycan 4S', category: 'Taycan', basePrice: 111100, horsepower: 522, zeroToSixty: 3.8, imageUrl: 'https://images.unsplash.com/photo-1611651338412-8403fa6e3599?w=800' },
       { id: 3, modelName: 'Macan S', category: 'Macan', basePrice: 72300, horsepower: 375, zeroToSixty: 4.6, imageUrl: 'https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800' }
     ]);
   }, []);
