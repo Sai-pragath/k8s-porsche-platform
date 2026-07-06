@@ -10,9 +10,9 @@ function App() {
     
     // For demo purposes, we'll mock the data
     setVehicles([
-      { id: 1, modelName: '911 Carrera', category: '911', basePrice: 114400, horsepower: 379, zeroToSixty: 4.0, imageUrl: 'https://files.porsche.com/filestore/image/multimedia/none/992-carrera-modelimage-sideshot/model/cfbb8ed3-1a15-11ea-80c6-005056bbdc38/porsche-model.png' },
-      { id: 2, modelName: 'Taycan 4S', category: 'Taycan', basePrice: 111100, horsepower: 522, zeroToSixty: 3.8, imageUrl: 'https://files.porsche.com/filestore/image/multimedia/none/j1-taycan-4s-modelimage-sideshot/model/1d3827d0-c3d5-11eb-80d6-005056bbdc38/porsche-model.png' },
-      { id: 3, modelName: 'Macan S', category: 'Macan', basePrice: 72300, horsepower: 375, zeroToSixty: 4.6, imageUrl: 'https://files.porsche.com/filestore/image/multimedia/none/macan-s-iii-modelimage-sideshot/model/2c48d281-2292-11ec-80df-005056bbdc38/porsche-model.png' }
+      { id: 1, modelName: '911 Carrera', category: '911', basePrice: 114400, horsepower: 379, zeroToSixty: 4.0, imageUrl: 'https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?w=800' },
+      { id: 2, modelName: 'Taycan 4S', category: 'Taycan', basePrice: 111100, horsepower: 522, zeroToSixty: 3.8, imageUrl: 'https://images.unsplash.com/photo-1503376760356-5eb6900f13a5?w=800' },
+      { id: 3, modelName: 'Macan S', category: 'Macan', basePrice: 72300, horsepower: 375, zeroToSixty: 4.6, imageUrl: 'https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800' }
     ]);
   }, []);
 
