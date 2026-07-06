@@ -80,6 +80,14 @@ Log into your AWS Management Console and navigate to **EC2**.
    # Grant Jenkins permissions to run Docker
    sudo usermod -aG docker jenkins
    sudo systemctl restart jenkins
+
+   # Install Kubectl (Required for Jenkins pipeline to deploy to K8s)
+   sudo apt-get update
+   sudo apt-get install -y apt-transport-https ca-certificates curl gpg
+   curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.29/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+   echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.29/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
+   sudo apt-get update
+   sudo apt-get install -y kubectl
    ```
 
 3. **Get Initial Jenkins Password**:
