@@ -1,0 +1,149 @@
+.app-container {
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  background: rgba(0, 0, 0, 0.9);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 2rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #d5001c;
+}
+
+.hero {
+  height: 80vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('https://files.porsche.com/filestore/image/multimedia/none/macan-e-web-hero-desktop/normal/b38997a3-abef-11ee-810f-005056bbdc38/porsche-normal.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  padding: 1rem 2.5rem;
+  background-color: #d5001c;
+  color: white;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #b00017;
+}
+
+.models-section {
+  padding: 4rem 3rem;
+  background-color: #121212;
+}
+
+.models-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-weight: 300;
+}
+
+.models-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.model-card {
+  background: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  padding: 2rem;
+}
+
+.model-card:hover {
+  transform: translateY(-5px);
+}
+
+.model-image-container {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.model-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.model-info h3 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.model-specs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #aaa;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.configure-button {
+  width: 100%;
+  padding: 0.75rem;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.configure-button:hover {
+  background: #fff;
+  color: #000;
+}
+
+.footer {
+  padding: 2rem;
+  text-align: center;
+  background: #000;
+  color: #555;
+  font-size: 0.9rem;
+}
