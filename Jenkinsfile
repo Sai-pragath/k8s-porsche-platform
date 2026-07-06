@@ -9,11 +9,6 @@ pipeline {
         IMAGE_TAG = "latest"
     }
 
-    tools {
-        jdk 'jdk21' // Make sure Jenkins has JDK 21 configured in Global Tool Configuration
-        maven 'maven3' // Ensure Maven 3 is configured
-    }
-
     stages {
         stage('Checkout') {
             steps {
@@ -24,7 +19,8 @@ pipeline {
         stage('Build Backend (Spring Boot Java 21)') {
             steps {
                 dir('backend') {
-                    sh 'mvn clean package -DskipTests'
+                    sh 'chmod +x mvnw'
+                    sh './mvnw clean package -DskipTests'
                 }
             }
         }
@@ -32,7 +28,8 @@ pipeline {
         stage('Test Backend') {
             steps {
                 dir('backend') {
-                    sh 'mvn test'
+                    sh 'chmod +x mvnw'
+                    sh './mvnw test'
                 }
             }
         }
