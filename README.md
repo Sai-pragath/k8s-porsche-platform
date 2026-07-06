@@ -55,9 +55,14 @@ Log into your AWS Management Console and navigate to **EC2**.
    # Install Java 21
    sudo apt install -y openjdk-21-jdk
 
-   # Install Jenkins
-   sudo wget -O /usr/share/keyrings/jenkins-keyring.asc https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
-   echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/" | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+   # Ensure dependencies are present
+   sudo apt-get install -y curl ca-certificates fontconfig
+
+   # Add Jenkins Repository and Key
+   sudo curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key -o /usr/share/keyrings/jenkins-keyring.asc
+   echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+   
+   # Update package list and install Jenkins
    sudo apt-get update
    sudo apt-get install -y jenkins
 
