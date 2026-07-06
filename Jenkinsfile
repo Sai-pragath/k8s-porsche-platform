@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-credentials') // You must create this in Jenkins!
-        DOCKERHUB_USERNAME = "your_dockerhub_username" // Replace with your actual username
+        DOCKERHUB_USERNAME = "saipragath" // Replace with your actual username
         BACKEND_IMAGE = "${DOCKERHUB_USERNAME}/porsche-backend"
         FRONTEND_IMAGE = "${DOCKERHUB_USERNAME}/porsche-frontend"
         IMAGE_TAG = "latest"
